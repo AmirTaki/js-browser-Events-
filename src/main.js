@@ -1,20 +1,10 @@
-// document.getElementById("text").innerHTML = "What is an EVENT?"
+// document.getElementById("text").innerHTML = " Object EVENT?"
 
-//  Event Click  => attribute onClick
+// object Event => event
+document.querySelector("li").addEventListener("click", (event)=>{
+    console.log(event)  // => return object event  : type : mouseEvent
+})
 
-let clickEvent = () => {
-    console.log("clicEvent")
-    document.querySelector("footer").remove()
-}
-
-
-// event : 1- Occurs by the user  =>  Event click
-// event : 2- Depending on what happens in the browser  => Event load
-
-// addEventListener  => event : click
-
-// document.querySelector('li').addEventListener("click", clickEvent)
-
-document.querySelectorAll('li')[1].addEventListener("click", (e)=>{
-        document.querySelector("footer").remove()  
+document.querySelector("#main-title").addEventListener("keypress", (event)=>{
+    console.log(event)  // return ojbect event : keyboardEvent
 })
