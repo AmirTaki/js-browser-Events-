@@ -1,18 +1,29 @@
-// document.getElementById("text").innerHTML = " Event hierarchy: EVENT?"
+// document.getElementById("text").innerHTML = " property Event: EVENT?"
 
+
+// property event
 document.querySelector("ul").addEventListener("click", (e)=>{
-    console.log(e)  // => return objectEvent : mouseEvent  -> (inherit)MouseEvent -> (inherit)UIEvent -> (inherit) Event
+    console.log(e) // return objectEvent type : MouseEvent
+
+    // property type
+    console.log(e.type)  // return type event
+ 
+    // property target
+    console.log(e.target)  // return element 
+
+
+    // property currentTarget
+    console.log(e.currentTarget)  // return element => eventListener (click)
+
+    // property timeStamp
+    console.log(e.timeStamp)  // return => The moment فهئث to click
+
+ 
 })
 
-/// property type for object Event  because (inherit) pass object.Event property type 
 
-document.querySelector("#main-title").addEventListener("click", (e)=>{
-    console.log(e.type)  
-})
-
-
-// load event
-window.addEventListener('load', (event)=>{
-    console.log(event)  // => return type event
-    
+// method preventDefault
+document.querySelector('#ref-link').addEventListener("click", (e)=>{
+ 
+    e.preventDefault() // stop defalut  
 })
