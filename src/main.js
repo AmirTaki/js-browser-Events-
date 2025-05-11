@@ -1,73 +1,63 @@
-// document.getElementById("text").innerHTML = " mouse event : EVENT?"
+// document.getElementById("text").innerHTML = "property mouse event : EVENT?"
 
-/*   -------------------------------  Click   -------------------------------- */
 
-// Click => object event : mouse event
-document.querySelector("#to-do-list").addEventListener("click", (e)=>{
-    console.log(e)  // => return Mouse Event
+/* ---------------------- altKey ------------------------------------------ */ 
+
+document.querySelector("#header-title").addEventListener('click', (e)=>{
+    console.log(e.altKey)  // => return true | flase
 })
 
-/*   -------------------------------  contextmenu   -------------------------------- */
+/* ---------------------- ctrlKey ------------------------------------------ */ 
 
-// contextmenu : click right 
-document.querySelector("#main-title").addEventListener("contextmenu", (e)=>{
-    console.log(e) // => return Mouse Event
-    console.log(e.preventDefault())
+document.querySelector("#myform").addEventListener('click', (e)=>{
+    console.log(e.ctrlKey)  // => return true | flase
 })
 
-/*   -------------------------------  dblclick   -------------------------------- */
+/* ---------------------- shiftKey ------------------------------------------ */ 
 
-// dblclick : two click
-document.querySelector("#myform").addEventListener("dblclick", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector("#main-title").addEventListener('click', (e)=>{
+    console.log(e.shiftKey)  // => return true | flase
 })
 
-/*   -------------------------------  mousedown   -------------------------------- */
+/* ---------------------- button ------------------------------------------ */ 
 
-// mousedown  // compression click left mouse 
-document.querySelector("#ref-link").addEventListener("mousedown", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector("#main-title").addEventListener('click', (e)=>{
+    console.log(e.button)  // => return 
+    // 0 :click left mouse & 
+    // 0 : click scroll & 
+    // 2 : click right mouse
+
 })
 
-/*   -------------------------------  mouseup   -------------------------------- */
+/* ---------------------- clientX & clientY ------------------------------------------ */ 
 
-// mouseup  // As soon as you pick it up click left mouse
-document.querySelector("#header-title").addEventListener("mouseup", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector("#to-do-list").addEventListener('click', (e)=>{
+    console.log(e.clientX)  // => return  distance click to left browsers 
+    console.log(e.clientY)  // => return distance click to top browsers
 })
 
-/*   -------------------------------  mosueenter   -------------------------------- */
 
-// mosueenter // Mouse pointer enters the element
-document.querySelector(".to-do-section").addEventListener("mouseenter", (e)=>{
-    console.log(e)  // => return Mouse Event
+/* ---------------------- offsetX & offsetY ------------------------------------------ */ 
+
+document.querySelector("#ref-link").addEventListener('click', (e)=>{
+    e.preventDefault();
+    console.log(e.offsetX)  // => return  distance click to left element 
+    console.log(e.offsetY)  // => return  distance click to top element 
 })
 
-/*   -------------------------------  mouseleave   -------------------------------- */
+/* ---------------------------- path ------------------------------------------ */ 
 
-// mouseleave // Mouse pointer leaving the element
-document.querySelector("header").addEventListener("mouseleave", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector('#spanId').addEventListener("click",(e)=>{
+    console.log(e.path) // => retutn list node element.parent
 })
 
-/*   -------------------------------  mousemove   -------------------------------- */
+/* ---------------------------- relatedTarget ------------------------------------------ */ 
 
-// mousemove  // Moving the mouse pointer over the element
-document.querySelector("h2").addEventListener("mousemove", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector("h2").addEventListener("mouseenter", (e)=>{
+    console.log(e.relatedTarget)  // return element
 })
 
-/*   -------------------------------  mouseover   -------------------------------- */
-
-// mouseover // The mouse pointer enters the element or a child element.
-document.querySelector("footer").addEventListener("mouseover", (e)=>{
-    console.log(e)  // => return Mouse Event
-})
-
-/*   -------------------------------  mouseout   -------------------------------- */
-
-// mouseout // The mouse pointer moves outside the element or outside a child element.
-document.querySelector("footer").addEventListener("mouseout", (e)=>{
-    console.log(e)  // => return Mouse Event
+document.querySelector("h2").addEventListener("mouseleave", (e)=>{
+    console.log(e.relatedTarget)  // return element
 })
 
