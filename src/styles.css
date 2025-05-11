@@ -25,3 +25,13 @@ header, main , footer {
 .to-do-section, #to-do-list, .to-do-item, .title, #header-title, .to-do-span, form {
     border: 1px solid #3498db;
 }
+
+
+#main-title{
+    transition:  font-size .6s;   
+    transition:  all .6s;   
+}
+#main-title:hover{
+    all: 1.9em;
+    font-size: 1.9em;
+}
