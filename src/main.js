@@ -1,63 +1,44 @@
-// document.getElementById("text").innerHTML = "property mouse event : EVENT?"
+// document.getElementById("text").innerHTML = "keyboard : EVENT"
 
+/* --------------------- keydown --------------------------------- */
 
-/* ---------------------- altKey ------------------------------------------ */ 
-
-document.querySelector("#header-title").addEventListener('click', (e)=>{
-    console.log(e.altKey)  // => return true | flase
+document.querySelector("#myform input[type=text]").addEventListener("keydown", (e)=>{
+    // console.log('key down')
 })
 
-/* ---------------------- ctrlKey ------------------------------------------ */ 
-
-document.querySelector("#myform").addEventListener('click', (e)=>{
-    console.log(e.ctrlKey)  // => return true | flase
+/* --------------------- keyup --------------------------------- */
+document.querySelector("#myform input[type=text]").addEventListener("keyup", (e)=>{
+    // console.log('key up')
 })
 
-/* ---------------------- shiftKey ------------------------------------------ */ 
-
-document.querySelector("#main-title").addEventListener('click', (e)=>{
-    console.log(e.shiftKey)  // => return true | flase
+//* --------------------- keypress --------------------------------- */
+document.querySelector("#myform input[type=text]").addEventListener("keypress", (e)=>{
+    // console.log('key press')
+    // console.log(e) // return KeyboardEvent
 })
 
-/* ---------------------- button ------------------------------------------ */ 
+// property => 
 
-document.querySelector("#main-title").addEventListener('click', (e)=>{
-    console.log(e.button)  // => return 
-    // 0 :click left mouse & 
-    // 0 : click scroll & 
-    // 2 : click right mouse
-
-})
-
-/* ---------------------- clientX & clientY ------------------------------------------ */ 
-
-document.querySelector("#to-do-list").addEventListener('click', (e)=>{
-    console.log(e.clientX)  // => return  distance click to left browsers 
-    console.log(e.clientY)  // => return distance click to top browsers
-})
-
-
-/* ---------------------- offsetX & offsetY ------------------------------------------ */ 
-
-document.querySelector("#ref-link").addEventListener('click', (e)=>{
-    e.preventDefault();
-    console.log(e.offsetX)  // => return  distance click to left element 
-    console.log(e.offsetY)  // => return  distance click to top element 
-})
-
-/* ---------------------------- path ------------------------------------------ */ 
-
-document.querySelector('#spanId').addEventListener("click",(e)=>{
-    console.log(e.path) // => retutn list node element.parent
-})
-
-/* ---------------------------- relatedTarget ------------------------------------------ */ 
-
-document.querySelector("h2").addEventListener("mouseenter", (e)=>{
-    console.log(e.relatedTarget)  // return element
-})
-
-document.querySelector("h2").addEventListener("mouseleave", (e)=>{
-    console.log(e.relatedTarget)  // return element
+document.querySelector("#myform input[type=text]").addEventListener("keyup", (e)=>{
+    
+    let char = e.keyCode || e.charCode || e.which
+    
+    // console.log(char)
+    
+    console.log(String.fromCharCode(char))
+    
+    console.log(e.code)
+    
+    console.log(e.key)
+    
+    console.log(e.repeat) 
+    
+    console.log(e.altKey) 
+    
+    console.log(e.altKey) 
+    
+    console.log(e.shiftKey) 
+    
+    console.log(e.ctrlKey) 
 })
 
