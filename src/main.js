@@ -1,29 +1,25 @@
-// document.getElementById("text").innerHTML = " property Event: EVENT?"
+// document.getElementById("text").innerHTML = " load: EVENT?"
 
 
-// property event
-document.querySelector("ul").addEventListener("click", (e)=>{
-    console.log(e) // return objectEvent type : MouseEvent
 
-    // property type
-    console.log(e.type)  // return type event
- 
-    // property target
-    console.log(e.target)  // return element 
+// document.querySelector("#to-do-list").remove()
 
 
-    // property currentTarget
-    console.log(e.currentTarget)  // return element => eventListener (click)
+window.addEventListener("load", ()=>{
+    
+    console.log("load")
+    document.querySelector("#to-do-list").remove()
+    
+})
 
-    // property timeStamp
-    console.log(e.timeStamp)  // return => The moment فهئث to click
-
- 
+window.addEventListener("DOMContentLoaded", ()=>{
+    
+    console.log("DOMContentLoaded")
+    // document.querySelector("#to-do-list").remove()
+    
 })
 
 
-// method preventDefault
-document.querySelector('#ref-link').addEventListener("click", (e)=>{
- 
-    e.preventDefault() // stop defalut  
-})
+// load :  all file : load  
+
+//DOMContentLoaded : documnet load : file(img, style , ..) not load => speed fast
