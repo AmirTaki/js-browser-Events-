@@ -1,37 +1,20 @@
- /* * {
+ * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}  */
+} 
 
 
 body{
-    max-width: 500px;
-    margin: 0 auto;
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
 }
-header, main , footer {
-    border: 2px solid black;
-    padding : 30px;
-    margin-bottom: 20px;
-}
-
-#to-do-list {
-    padding: 30px
-}
-.to-do-section{
-    padding: 30px
-}
-
-.to-do-section, #to-do-list, .to-do-item, .title, #header-title, .to-do-span, form {
-    border: 1px solid #3498db;
-}
-
-
-#main-title{
-    transition:  font-size .6s;   
-    transition:  all .6s;   
-}
-#main-title:hover{
-    all: 1.9em;
-    font-size: 1.9em;
+h3 {
+   font-family: 'Courier New', Courier, monospace;
+   font-style: italic;
+   font-weight: 400;
+    color: rgb(0, 0, 0);
 }
