@@ -1,35 +1,11 @@
-// document.getElementById("text").innerHTML = "touch event:EVENT?"
+// document.getElementById("text").innerHTML = "animation : EVENT "
 
-// touch start
-document.querySelector("#to-do-list").addEventListener("touchstart", (event)=>{
-    console.log(event, "touchStart")
+// animation start
+document.querySelector("#main-title").addEventListener("animationstart",(e)=>{
+    console.log("animationStart:", e)
 })
 
-// "onclick" in doucument.body         : check onclik 
-// "ontouchstart" in doucument.body   : check ontouch 
-
-// touch end
-document.querySelector("#to-do-list").addEventListener("touchend", (event)=>{
-    console.log(event, "touchEnd")
-})
-
-// touch move
-document.querySelector("#to-do-list").addEventListener("touchmove", (event)=>{
-    console.log(event, "touchMove")
-})
-
-// touch cancel   : pause in touch
-document.querySelector("#to-do-list").addEventListener("touchcancel", (event)=>{
-    console.log(event, "touchcancel")
-})
-
-
-// property touch Start
-
-document.querySelector("#ref-link").addEventListener("touchstart", (event)=>{
-    console.log(event.touches)  // return TouchList
-})
-
-document.querySelector("#ref-link").addEventListener("touchend", (event)=>{
-    console.log(event.touches)  // return TouchList -> length = 0
+// animation end
+document.querySelector("#main-title").addEventListener("animationend",(e)=>{
+    console.log("animationEnd:", e)
 })
