@@ -1,25 +1,16 @@
-// document.getElementById("text").innerHTML = " load: EVENT?"
+// document.getElementById("text").innerHTML = " orientation Change : EVENT?"
 
 
+// screen -> orientation.type
 
-// document.querySelector("#to-do-list").remove()
+window.screen.orientation.type  // => return : landscape - primary
 
+// event : orientation change
 
-window.addEventListener("load", ()=>{
-    
-    console.log("load")
-    document.querySelector("#to-do-list").remove()
-    
+window.addEventListener("orientationchange" ,(e)=>{
+    console.log(window.screen.orientation)
+    console.log(window.screen.orientation.type)
+
+    document.body.style.backgroundColor = window.screen.orientation.type == "landscape-primary" ? "red" : 'blue'
 })
-
-window.addEventListener("DOMContentLoaded", ()=>{
-    
-    console.log("DOMContentLoaded")
-    // document.querySelector("#to-do-list").remove()
-    
-})
-
-
-// load :  all file : load  
-
-//DOMContentLoaded : documnet load : file(img, style , ..) not load => speed fast
+   
