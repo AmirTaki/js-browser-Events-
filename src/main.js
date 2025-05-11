@@ -1,44 +1,30 @@
-// document.getElementById("text").innerHTML = "keyboard : EVENT"
+// document.getElementById("text").innerHTML = "input event
+// 
 
-/* --------------------- keydown --------------------------------- */
-
-document.querySelector("#myform input[type=text]").addEventListener("keydown", (e)=>{
-    // console.log('key down')
+document.querySelector("#myform input[type=text]").addEventListener("input", (e)=>{
+    // console.log(e)
+    // console.log('input')
 })
 
-/* --------------------- keyup --------------------------------- */
-document.querySelector("#myform input[type=text]").addEventListener("keyup", (e)=>{
-    // console.log('key up')
+document.querySelector("#myform input[type=text]").addEventListener("beforeinput", (e)=>{
+    // console.log(e)
+    // console.log("beforeinput")
 })
 
-//* --------------------- keypress --------------------------------- */
-document.querySelector("#myform input[type=text]").addEventListener("keypress", (e)=>{
-    // console.log('key press')
-    // console.log(e) // return KeyboardEvent
+// property
+
+document.querySelector("#myform input[type=text]").addEventListener("input", (e)=>{
+    
+    console.log(e.data)
+
+    console.log(e.inputType)
+
+    console.log(e.target)
+
+    console.log(e.target.value)
 })
 
-// property => 
 
-document.querySelector("#myform input[type=text]").addEventListener("keyup", (e)=>{
-    
-    let char = e.keyCode || e.charCode || e.which
-    
-    // console.log(char)
-    
-    console.log(String.fromCharCode(char))
-    
-    console.log(e.code)
-    
-    console.log(e.key)
-    
-    console.log(e.repeat) 
-    
-    console.log(e.altKey) 
-    
-    console.log(e.altKey) 
-    
-    console.log(e.shiftKey) 
-    
-    console.log(e.ctrlKey) 
+document.querySelector("#myform input[type=text]").addEventListener("beforeinput", (e)=>{
+   e.data == 0  ? e.preventDefault() : ""
 })
-
