@@ -25,21 +25,3 @@ header, main , footer {
 .to-do-section, #to-do-list, .to-do-item, .title, #header-title, .to-do-span, form {
     border: 1px solid #3498db;
 }
-
-
-#main-title {
-    animation-name: color-change ;
-    animation-duration: 6s;
-}
-
-@keyframes color-change {
-    0% {
-        color : silver;
-    }
-    50%{
-        color : blue;
-    }
-    100%{
-        color : red;
-    }
-}
